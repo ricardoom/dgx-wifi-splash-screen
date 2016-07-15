@@ -42,57 +42,202 @@
 
   h1 {
     color:#ED1C24;
+    margin-bottom: 0;
   }
 
   .titles > p {
-    color:#665C52;
+    color:#333333;
     font-size: 1.625em;
+    margin: .2em 0 2em;
   }
 
   /* Buttons */
   .btn {
-  background: #2799C5;
-  border-radius: 3px;
-  border-style: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: 'Kievit-Medium';
-  font-size: 1.25em;
-  outline: 0;
-  padding: 13px 12px 11px;
-  text-transform: uppercase;
+    background: #2799C5;
+    border-radius: 3px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Kievit-Medium';
+    font-size: 1.35em;
+    outline: 0;
+    padding: 18px 22px 15px;
+    text-transform: uppercase;
   }
+
   .btn:hover {
     color: #FFFFFF;
     background: #2799C5;
-  }
-
-  .donate {
-    background: #ED1C24;
-    color: #FFFFFF;
-    font-size: .8125em;
-    padding: 11px 20px 9px;
   }
 
   /* Lower Section */
   .lowerSection {
     background-color: #665C52;
     color: #FFFFFF;
+    padding: 3em;
+  }
+
+  .lowerSection p {
+    letter-spacing: .03em;
+    line-height: 1.3em;
+    margin-bottom: 3em;
   }
 
   .lowerSection a {
     color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
   }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    display: inline-block;
+  }
+
+  .lowerSection ul li {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+
+  .svgIcon {
+    fill: #FFFFFF;
+  }
+
+  .logoIcon {
+    fill: #333333;
+    width: 150px;
+  }
+
+  .donate {
+    background: #CF1D1E;
+    color: #FFFFFF;
+    font-size: 1em;
+    padding: 11px 20px 9px;
+  }
+
+  .donate:hover {
+    background: #9E0B0B;
+  }
+
+  .linkList {
+    font-size: 1em;
+    margin-top: .65em;
+  }
+
+  .linkList a {
+    margin: 0;
+  }
+
+  .socialList ul li {
+    display: inline-block;
+  }
+
+  @media (min-width:40em) {
+    body {
+      padding: 3em;
+    }
+
+    .topSection {
+      padding: 3em 10%;
+    }
+
+    .logoContainer {
+      width: auto;
+    }
+
+    .titles {
+      padding: 0 1em 0 6.5em;
+    }
+
+    .logoIcon {
+      width: 210px;
+    }
+
+    .lowerSection {
+      padding: 3em 10%;
+    }
+
+    .lowerSection > ul {
+      height: 8.5em;
+    }
+
+    .lowerSection ul li {
+      /*display: inline-block;*/
+    }
+
+    .linkList {
+      display: block;
+    }
+
+    .socialList {
+      float: right;
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+@media (min-width:60em) {
+
+  body {
+    padding: 5em;
+  }
+
+  .topSection {
+    padding: 5em 12%;
+  }
+
+    .logoContainer {
+      width: 30%;
+      margin-right: 2em;
+    }
+
+  .titles {
+    border-left: 1px solid #333333;
+    padding-left: 5em;
+    width: 50%;
+  }
+
+  .lowerSection ul li {
+    display: inline-block;
+  }
+
+  .lowerSection > ul {
+    height: 2em;
+  }
+
+  .linkList a {
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+  }
+}
+
+@media (min-width:100em) {
+  body {
+    padding: 10em;
+  }
+  .topSection,
+  .lowerSection {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 
 </style>
 </head>
   <body>
-    <div>
+    <div class="content-container">
       <!-- primary div -->
-      <div><!-- top section --></div>
-        <div>
-          <svg width="257" height="144" viewBox="0 0 257 144" class="svgIcon">
-            <title>nypl.logo.markType.svg</title>
+      <div class="topSection" ><!-- top section -->
+        <ul>
+          <li class="logoContainer"><!-- logo -->
+            <svg width="257" height="144" viewBox="0 0 257 144" class="logoIcon">
+              <title>nypl.logo.markType.svg</title>
               <g id="logo-type">
                 <g id="New-York">
                   <path    d="M156.36639,26.64949h1.93408l14.21812,20.593v-20.593H174.381V50.5016h-1.82667L158.19274,29.76519V50.5016h-1.82635V26.64949Z" transform="translate(-27.25197 -24.7154)"/>
