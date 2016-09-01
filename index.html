@@ -5,6 +5,7 @@
     <title>The New York Public Library - Wireless Access</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="//d2znry4lg8s0tq.cloudfront.net/images/favicon.ico">
     <style>
       /* Import Type Faces */
 
@@ -33,8 +34,13 @@
         padding: 1.9em;
       }
 
+      :focus {
+        outline: #3B99FC auto 5px;
+        outline: -webkit-focus-ring-color auto 5px;
+      }
+
       .topSection {
-        background-color: rgba(255, 255, 255, .75);
+        background-color: rgba(255, 255, 255, .9);
         border-top: 2px solid #ED1C24;
         padding: 1.9em;
       }
@@ -52,7 +58,7 @@
       /* Buttons */
 
       .btn {
-        background: #2799C5;
+        background: #1B7FA7;
         border-radius: 3px;
         border-style: none;
         color: #FFFFFF;
@@ -67,8 +73,14 @@
 
       .btn:hover {
         color: #FFFFFF;
-        background: #2799C5;
+        background: #135772;
       }
+
+      .btn:focus {
+        outline: #3B99FC auto 5px;
+        outline: -webkit-focus-ring-color auto 5px;
+      }
+
       /* Lower Section */
 
       .lowerSection {
@@ -78,7 +90,6 @@
       }
 
       .lowerSection p {
-        letter-spacing: .03em;
         line-height: 1.3em;
         margin-bottom: 3em;
       }
@@ -221,8 +232,8 @@
         <ul>
           <li class="logoContainer">
             <!-- logo -->
-            <svg width="257" height="144" viewBox="0 0 257 144" class="logoIcon">
-              <title>nypl.logo.markType.svg</title>
+            <svg aria-hidden="true" width="257" height="144" viewBox="0 0 257 144" class="logoIcon">
+              <title>The New York Public Library</title>
               <g id="logo-type">
                 <g id="New-York">
                   <path d="M156.36639,26.64949h1.93408l14.21812,20.593v-20.593H174.381V50.5016h-1.82667L158.19274,29.76519V50.5016h-1.82635V26.64949Z" transform="translate(-27.25197 -24.7154)" />
@@ -324,26 +335,26 @@
             <ul>
               <!-- social media icons -->
               <li>
-                <a href="https://www.facebook.com/nypl">
-                  <svg width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
-                    <title>facebook.icon.svg</title>
+                <a aria-label="NYPL on Facebook" href="https://www.facebook.com/nypl">
+                  <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
+                    <title>NYPL on Facebook</title>
                     <path d="M12.72165,9.5717v3.11562H10.43881v3.81029h2.28284V26.953H17.4109V16.49761h3.14625s0.29492-1.82688.43733-3.82466H17.42862v-2.6048a1.10661,1.10661,0,0,1,1.01659-.9132H21V5.18838H17.52652C12.60581,5.18838,12.72165,9.00225,12.72165,9.5717Z" />
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/nypl">
-                  <svg width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
-                    <title>twitter.icon.svg</title>
+                <a aria-label="NYPL on Twitter" href="https://twitter.com/nypl">
+                  <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
+                    <title>NYPL on Twitter</title>
                     <path d="M26.49768,9.48856a8.61073,8.61073,0,0,1-2.474.67827,4.31994,4.31994,0,0,0,1.894-2.38309A8.62415,8.62415,0,0,1,23.18238,8.829a4.31151,4.31151,0,0,0-7.34014,3.92869A12.22874,12.22874,0,0,1,6.96393,8.25719,4.31221,4.31221,0,0,0,8.297,14.008a4.28992,4.28992,0,0,1-1.951-.53878l-0.00037.05415a4.31,4.31,0,0,0,3.45531,4.2237,4.31827,4.31827,0,0,1-1.94526.07379,4.31191,4.31191,0,0,0,4.0238,2.99146,8.64284,8.64284,0,0,1-5.34958,1.84387A8.7682,8.7682,0,0,1,5.50232,22.596,12.25026,12.25026,0,0,0,24.3608,12.27558q0-.28012-0.01245-0.55723A8.7542,8.7542,0,0,0,26.49768,9.48856Z"
                     />
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/nypl/">
-                  <svg width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
-                    <title>instagram.icon.icon</title>
+                <a aria-label="NYPL on Instagram" href="https://www.instagram.com/nypl/">
+                  <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
+                    <title>NYPL on Instagram</title>
                     <path d="M9.01259,7.1015h13.975a2.41081,2.41081,0,0,1,2.41081,2.41081V23.48753a2.411,2.411,0,0,1-2.411,2.411H9.01259a2.411,2.411,0,0,1-2.411-2.411V9.51247A2.411,2.411,0,0,1,9.01259,7.1015Z" />
                     <path d="M23.26911,15.056H21.617a5.35536,5.35536,0,0,1,.24473,1.603A5.75765,5.75765,0,0,1,16.01226,22.325,5.75475,5.75475,0,0,1,10.175,16.659a5.35287,5.35287,0,0,1,.24473-1.603H8.69416v7.93a0.74176,0.74176,0,0,0,.74656.74641h13.0819a0.7417,0.7417,0,0,0,.74649-0.74641v-7.93Z"
                         fill="#665C52" />
@@ -353,18 +364,18 @@
                 </a>
               </li>
               <li>
-                <a href="http://nypl.tumblr.com/">
-                  <svg width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
-                    <title>tumblr.icon.svg</title>
+                <a aria-label="NYPL on Tumblr" href="http://nypl.tumblr.com/">
+                  <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
+                    <title>NYPL on Tumblr</title>
                     <path d="M16.67149,7.07068v4.51358h4.23674v2.80307H16.67149v4.57952a7.31911,7.31911,0,0,0,.16358,1.99328,1.36182,1.36182,0,0,0,.61263.705,2.5789,2.5789,0,0,0,1.35569.3546A4.88228,4.88228,0,0,0,21.501,21.138v2.81746a10.70756,10.70756,0,0,1-2.07252.7557,8.74272,8.74272,0,0,1-2.00741.21811,6.93937,6.93937,0,0,1-2.16467-.30939,4.67086,4.67086,0,0,1-1.60525-.88253,3.196,3.196,0,0,1-.9212-1.21767,5.26554,5.26554,0,0,1-.25654-1.869v-6.2634H10.499V11.8611A5.2741,5.2741,0,0,0,12.302,10.881,4.88324,4.88324,0,0,0,13.5064,9.34668a6.92875,6.92875,0,0,0,.62534-2.276h2.53976Z"
                     />
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/user/NewYorkPublicLibrary">
-                  <svg width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
-                    <title>youtube.icon.svg</title>
+                <a aria-label="NYPL on Youtube" href="https://www.youtube.com/user/NewYorkPublicLibrary">
+                  <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
+                    <title>NYPL on Youtube</title>
                     <g>
                       <path d="M11.30886,5.21875L9.82525,8.10762,8.34164,5.21875H6.44935L9.123,9.7961l0.01606-.01051v3.5191h1.37232V9.78558L10.52609,9.7961l2.67506-4.57735H11.30886Z" />
                       <path d="M15.31453,7.91406a0.68927,0.68927,0,0,1,.68616.67383V11.2832a0.68627,0.68627,0,0,1-1.37232,0V8.58789A0.68835,0.68835,0,0,1,15.31453,7.91406Zm0-1.34766A2.0459,2.0459,0,0,0,13.256,8.58789V11.2832a2.05882,2.05882,0,0,0,4.117,0V8.58789a2.0459,2.0459,0,0,0-2.05848-2.02148h0Z"
