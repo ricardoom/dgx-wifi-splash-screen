@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <title>The New York Public Library - Wireless Access</title>
+    <title>Wireless Access at The New York Public Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="//d2znry4lg8s0tq.cloudfront.net/images/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
     <style>
       /* Import Type Faces */
 
       @font-face {
         font-family: 'Kievit-Book';
-        src: url('//d2znry4lg8s0tq.cloudfront.net/ff_kievit_web/KievitWeb-Book.woff') format('woff'), url('//d2znry4lg8s0tq.cloudfront.net/ff_kievit_web/KievitWeb-Book.eot') format('eot');
+        src: url('assets/KievitWeb-Book.woff') format('woff'),
+             url('assets/KievitWeb-Book.eot') format('eot');
       }
 
       @font-face {
         font-family: 'Kievit-Medium';
-        src: url('//d2znry4lg8s0tq.cloudfront.net/ff_kievit_web/KievitWeb-Medi.woff') format('woff'), url('//d2znry4lg8s0tq.cloudfront.net/KievitWeb-Medi.eot') format('eot');
+        src: url('assets/KievitWeb-Medi.woff') format('woff'),
+             url('assets/KievitWeb-Medi.eot') format('eot');
       }
 
       html {
@@ -60,12 +61,11 @@
         border-style: none;
         color: #FFFFFF;
         cursor: pointer;
-        font-family: 'Kievit-Medium';
-        font-size: 1.35em;
         outline: 0;
         padding: 18px 22px 15px;
         text-transform: uppercase;
         text-decoration: none;
+        width: 7.8em;
       }
 
       .btn:hover {
@@ -77,6 +77,17 @@
         outline: #3B99FC auto 5px;
         outline: -webkit-focus-ring-color auto 5px;
       }
+
+        .btn input[type="button"] {
+          color: #fff;
+          cursor: pointer;
+          background: transparent;
+          border: none;
+          font-family: 'Kievit-Medium';
+	        font-size: 1.35em;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
 
       /* Lower Section */
 
@@ -124,8 +135,14 @@
       .donate {
         background: #CF1D1E;
         color: #FFFFFF;
+        cursor: pointer;
         font-size: 1em;
+        font-family: 'Kievit-Medium', 'Helvetica', sans-serif;
         padding: 11px 20px 9px;
+        border-radius: 3px;
+        border-style: none;
+        outline: 0;
+        text-transform: uppercase;
       }
 
       .donate:hover {
@@ -137,8 +154,15 @@
         margin-top: .65em;
       }
 
-      .linkList a {
-        margin: 0;
+      .enews input[type="button"] {
+        border: none;
+        background-color: transparent;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: 'Kievit-Book', 'Helvetica', sans-serif;
+        font-size: 1em;
+        margin: 0 .5em;
+        text-transform: uppercase;
       }
 
       .socialList ul li {
@@ -304,7 +328,22 @@
             <!-- message & button -->
             <h1>Welcome to The New York Public Library</h1>
             <p>We are pleased to provide you with free wireless Internet access.</p>
-            <a class="btn" href="https://www.nypl.org">Go Online</a>
+            <!--
+              <a class="btn" href="https://www.nypl.org">Go Online</a>
+            -->
+            <!-- button -->
+            <form class="btn" name="myform2" method="post" action="reg.php">
+  		          <input name="auth_user" type="hidden">
+  		          <input name="auth_pass" type="hidden">
+  		          <input name="redir_url" type="hidden" value="http://www.nypl.org">
+  		          <input name="accept" type="hidden" value="Continue">
+		            <input type="hidden" name="checkbox" value="checkbox"/>
+                <input type="button" value="Go Online" style="cursor:hand;" onclick="document.myform2.submit();" />
+                <!---
+		            <input type="image" src="captiveportal-proceed.png" style="cursor:hand;" onclick="document.myform2.submit();" alt="link to continue with NYPL wireless access"/>
+                -->
+		        </form>
+          <!-- button -->
           </li>
         </ul>
       </div>
@@ -320,36 +359,88 @@
             <!-- buttons & links -->
             <ul>
               <li>
-                <a href="https://www.nypl.org/give/donate" class="btn donate">
+                <!-- <a href="https://www.nypl.org/give/donate" class="btn donate">
                   Donate
-                </a>
+                </a> -->
+                <form name="myform5" method="post" action="reg.php"  class="left">
+  		            <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+                  <input name="redir_url" type="hidden" value="https://www.nypl.org/give/donate">
+  		            <input name="accept" type="hidden" value="Continue">
+  		            <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input class="donate" type="button" value="donate" onclick="document.myform5.submit();" title="Library Card" />
+                </form>
               </li>
-              <li><a href="https://catalog.nypl.org/screens/selfregpick.html">get a library card</a></li>
-              <li><a href="https://www.nypl.org/eNews">get email updates</a></li>
+              <li>
+                <!-- <a href="https://catalog.nypl.org/screens/selfregpick.html">get a library card</a> -->
+                <form class="enews"  name="myform5" method="post" action="reg.php"  class="left">
+  		            <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+                  <input name="redir_url" type="hidden" value="http://catalog.nypl.org/screens/selfregpick.html">
+  		            <input name="accept" type="hidden" value="Continue">
+  		            <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input type="button" value="get a library card" onclick="document.myform5.submit();" title="Library Card" />
+                </form>
+              </li>
+              <li>
+                <!-- <a href="https://www.nypl.org/eNews">get email updates</a> -->
+                <form class="enews" name="myform6" method="post" action="reg.php" class="left">
+  	              <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+		              <input name="redir_url" type="hidden" value="http://www.nypl.org/eNews">
+  	              <input name="accept" type="hidden" value="Continue">
+		              <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input type="button" value="get email updates" onclick="document.myform6.submit();" title="Sign up for our email newsletter" />
+		            </form>
+              </li>
             </ul>
           </li>
           <li class="socialList">
             <ul>
               <!-- social media icons -->
               <li>
-                <a aria-label="NYPL on Facebook" href="https://www.facebook.com/nypl">
+                <form name="myform3" method="post" action="reg.php">
+  		              <input name="auth_user" type="hidden">
+  		              <input name="auth_pass" type="hidden">
+                    <input name="redir_url" type="hidden" value="https://www.facebook.com/nypl">
+  		              <input name="accept" type="hidden" value="Continue">
+  		              <input type="hidden" name="checkbox" value="checkbox"/>
+		                <input type="image" src="assets/fb.icon.png" width="48" height="48" onclick="document.myform3.submit();" alt="Follow NYPL on Facebook" />
+		            </form>
+                <!-- <a aria-label="NYPL on Facebook" href="https://www.facebook.com/nypl">
                   <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
                     <title>NYPL on Facebook</title>
                     <path d="M12.72165,9.5717v3.11562H10.43881v3.81029h2.28284V26.953H17.4109V16.49761h3.14625s0.29492-1.82688.43733-3.82466H17.42862v-2.6048a1.10661,1.10661,0,0,1,1.01659-.9132H21V5.18838H17.52652C12.60581,5.18838,12.72165,9.00225,12.72165,9.5717Z" />
                   </svg>
-                </a>
+                </a> -->
               </li>
               <li>
-                <a aria-label="NYPL on Twitter" href="https://twitter.com/nypl">
+                <form name="myform8" method="post" action="reg.php" class="left">
+  	              <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+		              <input name="redir_url" type="hidden" value="https://twitter.com/nypl">
+  	              <input name="accept" type="hidden" value="Continue">
+		              <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input type="image" src="assets/twitter.icon.png" onclick="document.myform8.submit();" alt="Follow @nypl on Twitter" />
+                </form>
+                <!-- <a aria-label="NYPL on Twitter" href="https://twitter.com/nypl">
                   <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
                     <title>NYPL on Twitter</title>
                     <path d="M26.49768,9.48856a8.61073,8.61073,0,0,1-2.474.67827,4.31994,4.31994,0,0,0,1.894-2.38309A8.62415,8.62415,0,0,1,23.18238,8.829a4.31151,4.31151,0,0,0-7.34014,3.92869A12.22874,12.22874,0,0,1,6.96393,8.25719,4.31221,4.31221,0,0,0,8.297,14.008a4.28992,4.28992,0,0,1-1.951-.53878l-0.00037.05415a4.31,4.31,0,0,0,3.45531,4.2237,4.31827,4.31827,0,0,1-1.94526.07379,4.31191,4.31191,0,0,0,4.0238,2.99146,8.64284,8.64284,0,0,1-5.34958,1.84387A8.7682,8.7682,0,0,1,5.50232,22.596,12.25026,12.25026,0,0,0,24.3608,12.27558q0-.28012-0.01245-0.55723A8.7542,8.7542,0,0,0,26.49768,9.48856Z"
                     />
                   </svg>
-                </a>
+                </a> -->
               </li>
               <li>
-                <a aria-label="NYPL on Instagram" href="https://www.instagram.com/nypl/">
+                <form name="myform9" method="post" action="reg.php"  class="left">
+    	            <input name="auth_user" type="hidden">
+  		            <input name="auth_pass" type="hidden">
+  		            <input name="redir_url" type="hidden" value="https://www.instagram.com/nypl/">
+    	            <input name="accept" type="hidden" value="Continue">
+  		            <input type="hidden" name="checkbox" value="checkbox"/>
+  		            <input type="image" src="assets/insta.icon.png" onclick="document.myform9.submit();" alt="Follow NYPL on Instagram" />
+                </form>
+                <!-- <a aria-label="NYPL on Instagram" href="https://www.instagram.com/nypl/">
                   <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
                     <title>NYPL on Instagram</title>
                     <path d="M9.01259,7.1015h13.975a2.41081,2.41081,0,0,1,2.41081,2.41081V23.48753a2.411,2.411,0,0,1-2.411,2.411H9.01259a2.411,2.411,0,0,1-2.411-2.411V9.51247A2.411,2.411,0,0,1,9.01259,7.1015Z" />
@@ -358,19 +449,35 @@
                     <path d="M16.01226,12.80422a3.661,3.661,0,1,0,3.78137,3.65913A3.71728,3.71728,0,0,0,16.01226,12.80422Z" fill="#665C52" />
                     <path d="M20.29515,9.19436h2.12958a0.84438,0.84438,0,0,1,.84438.84438v2.01908a0.84446,0.84446,0,0,1-.84446.84446H20.29546a0.84446,0.84446,0,0,1-.84446-0.84446V10.0385A0.84414,0.84414,0,0,1,20.29515,9.19436Z" fill="#665C52" />
                   </svg>
-                </a>
+                </a> -->
               </li>
               <li>
-                <a aria-label="NYPL on Tumblr" href="http://nypl.tumblr.com/">
+                <form name="myform9" method="post" action="reg.php"  class="left">
+  	              <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+		              <input name="redir_url" type="hidden" value="http://nypl.tumblr.com/">
+  	              <input name="accept" type="hidden" value="Continue">
+		              <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input type="image" src="assets/tumblr.icon.png" onclick="document.myform11.submit();" alt="Follow NYPL on Tumblr" />
+                </form>
+                <!-- <a aria-label="NYPL on Tumblr" href="http://nypl.tumblr.com/">
                   <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
                     <title>NYPL on Tumblr</title>
                     <path d="M16.67149,7.07068v4.51358h4.23674v2.80307H16.67149v4.57952a7.31911,7.31911,0,0,0,.16358,1.99328,1.36182,1.36182,0,0,0,.61263.705,2.5789,2.5789,0,0,0,1.35569.3546A4.88228,4.88228,0,0,0,21.501,21.138v2.81746a10.70756,10.70756,0,0,1-2.07252.7557,8.74272,8.74272,0,0,1-2.00741.21811,6.93937,6.93937,0,0,1-2.16467-.30939,4.67086,4.67086,0,0,1-1.60525-.88253,3.196,3.196,0,0,1-.9212-1.21767,5.26554,5.26554,0,0,1-.25654-1.869v-6.2634H10.499V11.8611A5.2741,5.2741,0,0,0,12.302,10.881,4.88324,4.88324,0,0,0,13.5064,9.34668a6.92875,6.92875,0,0,0,.62534-2.276h2.53976Z"
                     />
                   </svg>
-                </a>
+                </a> -->
               </li>
               <li>
-                <a aria-label="NYPL on Youtube" href="https://www.youtube.com/user/NewYorkPublicLibrary">
+                <form name="myform10" method="post" action="reg.php"  class="left">
+  	              <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+		              <input name="redir_url" type="hidden" value="http://www.youtube.com/NewYorkPublicLibrary">
+  	              <input name="accept" type="hidden" value="Continue">
+		              <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input type="image" src="assets/youtube.icon.png" style="cursor:hand;" onclick="document.myform10.submit();" alt="Watch NYPL on YouTube" />
+                </form>
+                <!-- <a aria-label="NYPL on Youtube" href="https://www.youtube.com/user/NewYorkPublicLibrary">
                   <svg aria-hidden="true" width="48" height="48" viewBox="0 0 32 32" class="svgIcon">
                     <title>NYPL on Youtube</title>
                     <g>
@@ -384,7 +491,7 @@
                       />
                     </g>
                   </svg>
-                </a>
+                </a> -->
               </li>
             </ul>
           </li>
