@@ -4,4 +4,4 @@
 ###Our new wifi Splash screen. yeah.
 
 
-version 1.0.2 - 09.01.2016
+version 1.0.3 - 09.13.2016

@@ -4,20 +4,20 @@
     <title>Wireless Access at The New York Public Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" href="cp.2016.9.favicon.ico">
     <style>
       /* Import Type Faces */
 
       @font-face {
         font-family: 'Kievit-Book';
-        src: url('assets/KievitWeb-Book.woff') format('woff'),
-             url('assets/KievitWeb-Book.eot') format('eot');
+        src: url('cp.2016.9.KievitWeb-Book.woff') format('woff'),
+             url('cp.2016.9.KievitWeb-Book.eot') format('eot');
       }
 
       @font-face {
         font-family: 'Kievit-Medium';
-        src: url('assets/KievitWeb-Medi.woff') format('woff'),
-             url('assets/KievitWeb-Medi.eot') format('eot');
+        src: url('cp.2016.9.KievitWeb-Medi.woff') format('woff'),
+             url('cp.2016.9.KievitWeb-Medi.eot') format('eot');
       }
 
       html {
@@ -62,10 +62,8 @@
         color: #FFFFFF;
         cursor: pointer;
         outline: 0;
-        padding: 18px 22px 15px;
         text-transform: uppercase;
         text-decoration: none;
-        width: 7.8em;
       }
 
       .btn:hover {
@@ -86,7 +84,11 @@
           font-family: 'Kievit-Medium';
 	        font-size: 1.35em;
           font-weight: 400;
+          padding: 18px 22px 15px 22px;
           text-transform: uppercase;
+          width: 100%;
+          -webkit-appearance: none;
+          -moz-appearance: none;
         }
 
       /* Lower Section */
@@ -143,6 +145,8 @@
         border-style: none;
         outline: 0;
         text-transform: uppercase;
+        -webkit-appearance: none;
+        -moz-appearance: none;
       }
 
       .donate:hover {
@@ -202,6 +206,11 @@
           position: relative;
           display: inline-block;
         }
+
+        .btn {
+          width: 10em;
+        }
+
       }
 
       @media (min-width:60em) {
@@ -235,13 +244,16 @@
       @media (min-width:100em) {
         body {
           padding: 10em;
-        }
+          }
+
         .topSection,
         .lowerSection {
           padding-left: 15%;
           padding-right: 15%;
         }
       }
+    }
+
     </style>
   </head>
 
@@ -329,13 +341,13 @@
             <h1>Welcome to The New York Public Library</h1>
             <p>We are pleased to provide you with free wireless Internet access.</p>
             <!-- button -->
-            <form class="btn" name="myform2" method="post" action="reg.php">
+            <form class="btn" name="myform1" method="post" action="reg.php">
   		          <input name="auth_user" type="hidden">
   		          <input name="auth_pass" type="hidden">
-  		          <input name="redir_url" type="hidden" value="http://www.nypl.org">
+  		          <input name="redir_url" type="hidden" value="https://www.nypl.org">
   		          <input name="accept" type="hidden" value="Continue">
 		            <input type="hidden" name="checkbox" value="checkbox"/>
-                <input type="button" value="Go Online" onclick="document.myform2.submit();" />
+                <input type="button" value="Go Online" onclick="document.myform1.submit();" />
 		        </form>
           <!-- button -->
           </li>
@@ -356,35 +368,35 @@
                 <!-- <a href="https://www.nypl.org/give/donate" class="btn donate">
                   Donate
                 </a> -->
-                <form name="myform5" method="post" action="reg.php"  class="left">
+                <form name="myform2" method="post" action="reg.php" class="left">
   		            <input name="auth_user" type="hidden">
 		              <input name="auth_pass" type="hidden">
                   <input name="redir_url" type="hidden" value="https://www.nypl.org/give/donate">
   		            <input name="accept" type="hidden" value="Continue">
   		            <input type="hidden" name="checkbox" value="checkbox"/>
-		              <input class="donate" type="button" value="donate" onclick="document.myform5.submit();" title="Library Card" />
+		              <input class="donate" type="button" value="donate" onclick="document.myform2.submit();" title="Library Card" />
                 </form>
               </li>
               <li>
                 <!-- <a href="https://catalog.nypl.org/screens/selfregpick.html">get a library card</a> -->
-                <form class="enews"  name="myform5" method="post" action="reg.php">
+                <form class="enews"  name="myform3" method="post" action="reg.php">
   		            <input name="auth_user" type="hidden">
 		              <input name="auth_pass" type="hidden">
-                  <input name="redir_url" type="hidden" value="http://catalog.nypl.org/screens/selfregpick.html">
+                  <input name="redir_url" type="hidden" value="https://catalog.nypl.org/screens/selfregpick.html">
   		            <input name="accept" type="hidden" value="Continue">
   		            <input type="hidden" name="checkbox" value="checkbox"/>
-		              <input type="button" value="get a library card" onclick="document.myform5.submit();" title="Library Card" />
+		              <input type="button" value="get a library card" onclick="document.myform3.submit();" title="Library Card" />
                 </form>
               </li>
               <li>
                 <!-- <a href="https://www.nypl.org/eNews">get email updates</a> -->
-                <form class="enews" name="myform6" method="post" action="reg.php">
+                <form class="enews" name="myform4" method="post" action="reg.php">
   	              <input name="auth_user" type="hidden">
 		              <input name="auth_pass" type="hidden">
-		              <input name="redir_url" type="hidden" value="http://www.nypl.org/eNews">
+		              <input name="redir_url" type="hidden" value="https://www.nypl.org/eNews">
   	              <input name="accept" type="hidden" value="Continue">
 		              <input type="hidden" name="checkbox" value="checkbox"/>
-		              <input type="button" value="get email updates" onclick="document.myform6.submit();" title="Sign up for our email newsletter" />
+		              <input type="button" value="get email updates" onclick="document.myform4.submit();" title="Sign up for our email newsletter" />
 		            </form>
               </li>
             </ul>
@@ -393,53 +405,53 @@
             <ul>
               <!-- social media icons -->
               <li>
-                <form name="myform3" method="post" action="reg.php">
+                <form name="myform5" method="post" action="reg.php">
   		              <input name="auth_user" type="hidden">
   		              <input name="auth_pass" type="hidden">
                     <input name="redir_url" type="hidden" value="https://www.facebook.com/nypl">
   		              <input name="accept" type="hidden" value="Continue">
   		              <input type="hidden" name="checkbox" value="checkbox"/>
-		                <input type="image" src="assets/fb.icon.png" width="48" height="48" onclick="document.myform3.submit();" alt="Follow NYPL on Facebook" />
+		                <input type="image" src="cp.2016.9.fb.icon.png" width="48" height="48" onclick="document.myform5.submit();" alt="Follow NYPL on Facebook" />
 		            </form>
               </li>
               <li>
-                <form name="myform8" method="post" action="reg.php" class="left">
+                <form name="myform6" method="post" action="reg.php" class="left">
   	              <input name="auth_user" type="hidden">
 		              <input name="auth_pass" type="hidden">
 		              <input name="redir_url" type="hidden" value="https://twitter.com/nypl">
   	              <input name="accept" type="hidden" value="Continue">
 		              <input type="hidden" name="checkbox" value="checkbox"/>
-		              <input type="image" src="assets/twitter.icon.png" onclick="document.myform8.submit();" alt="Follow NYPL on Twitter" />
+		              <input type="image" src="cp.2016.9.twitter.icon.png" onclick="document.myform6.submit();" alt="Follow NYPL on Twitter" />
                 </form>
               </li>
               <li>
-                <form name="myform9" method="post" action="reg.php"  class="left">
+                <form name="myform7" method="post" action="reg.php"  class="left">
     	            <input name="auth_user" type="hidden">
   		            <input name="auth_pass" type="hidden">
   		            <input name="redir_url" type="hidden" value="https://www.instagram.com/nypl/">
     	            <input name="accept" type="hidden" value="Continue">
   		            <input type="hidden" name="checkbox" value="checkbox"/>
-  		            <input type="image" src="assets/insta.icon.png" onclick="document.myform9.submit();" alt="Follow NYPL on Instagram" />
+  		            <input type="image" src="cp.2016.9.insta.icon.png" onclick="document.myform7.submit();" alt="Follow NYPL on Instagram" />
+                </form>
+              </li>
+              <li>
+                <form name="myform8" method="post" action="reg.php"  class="left">
+  	              <input name="auth_user" type="hidden">
+		              <input name="auth_pass" type="hidden">
+		              <input name="redir_url" type="hidden" value="https://nypl.tumblr.com/">
+  	              <input name="accept" type="hidden" value="Continue">
+		              <input type="hidden" name="checkbox" value="checkbox"/>
+		              <input type="image" src="cp.2016.9.tumblr.icon.png" onclick="document.myform8.submit();" alt="Follow NYPL on Tumblr" />
                 </form>
               </li>
               <li>
                 <form name="myform9" method="post" action="reg.php"  class="left">
   	              <input name="auth_user" type="hidden">
 		              <input name="auth_pass" type="hidden">
-		              <input name="redir_url" type="hidden" value="http://nypl.tumblr.com/">
+		              <input name="redir_url" type="hidden" value="https://www.youtube.com/NewYorkPublicLibrary">
   	              <input name="accept" type="hidden" value="Continue">
 		              <input type="hidden" name="checkbox" value="checkbox"/>
-		              <input type="image" src="assets/tumblr.icon.png" onclick="document.myform11.submit();" alt="Follow NYPL on Tumblr" />
-                </form>
-              </li>
-              <li>
-                <form name="myform10" method="post" action="reg.php"  class="left">
-  	              <input name="auth_user" type="hidden">
-		              <input name="auth_pass" type="hidden">
-		              <input name="redir_url" type="hidden" value="http://www.youtube.com/NewYorkPublicLibrary">
-  	              <input name="accept" type="hidden" value="Continue">
-		              <input type="hidden" name="checkbox" value="checkbox"/>
-		              <input type="image" src="assets/youtube.icon.png" onclick="document.myform10.submit();" alt="Watch NYPL on YouTube" />
+		              <input type="image" src="cp.2016.9.youtube.icon.png" onclick="document.myform9.submit();" alt="Watch NYPL on YouTube" />
                 </form>
               </li>
             </ul>
