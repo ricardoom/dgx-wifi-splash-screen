@@ -145,6 +145,8 @@
         border-style: none;
         outline: 0;
         text-transform: uppercase;
+        -webkit-appearance: none;
+        -moz-appearance: none;
       }
 
       .donate:hover {
@@ -204,6 +206,11 @@
           position: relative;
           display: inline-block;
         }
+
+        .btn {
+          width: 10em;
+        }
+
       }
 
       @media (min-width:60em) {
@@ -237,13 +244,16 @@
       @media (min-width:100em) {
         body {
           padding: 10em;
-        }
+          }
+
         .topSection,
         .lowerSection {
           padding-left: 15%;
           padding-right: 15%;
         }
       }
+    }
+
     </style>
   </head>
 
