@@ -121,8 +121,8 @@
       }
 
       .lowerSection ul li {
-        display: block;
-        margin-bottom: 1em;
+        /*display: block;*/
+        /*margin-bottom: 1em;*/
       }
 
       .svgIcon {
@@ -154,8 +154,14 @@
       }
 
       .linkList {
-        font-size: 1em;
         margin-top: .65em;
+        width: 100%;
+      }
+
+      .linkList-items li {
+        font-size: 1em;
+        display: block;
+        margin-bottom: 1em;
       }
 
       .enews input[type="button"] {
@@ -169,7 +175,12 @@
         text-transform: uppercase;
       }
 
-      .socialList ul li {
+      /*.socialList ul li {}*/
+      .socialList {
+        width: 100%;
+      }
+
+      .socialList-items li {
         display: inline-block;
       }
 
@@ -193,7 +204,7 @@
           padding: 3em 10%;
         }
         .lowerSection > ul {
-          height: 8.5em;
+          height: 10em;
         }
         .lowerSection ul li {
           /*display: inline-block;*/
@@ -202,9 +213,10 @@
           display: block;
         }
         .socialList {
-          float: right;
+          /*float: right;
           position: relative;
-          display: inline-block;
+          display: inline-block;*/
+          margin-bottom: 0;
         }
 
         .btn {
@@ -215,31 +227,48 @@
 
       @media (min-width:60em) {
         body {
-          padding: 5em;
+          padding: 2.5em;
         }
+
         .topSection {
-          padding: 5em 12%;
+          padding: 2.5em 5%;
         }
+
         .logoContainer {
-          width: 30%;
-          margin-right: 2em;
+          width: 257px;
+          
         }
+
         .titles {
-          border-left: 1px solid #333333;
-          padding-left: 5em;
+          border-left: 1px solid #333;
+          padding:0 0 0 3.2em;
           width: 50%;
         }
+
         .lowerSection ul li {
           display: inline-block;
         }
-        .lowerSection> ul {
-          height: 2em;
+
+        .lowerSection > ul {
+          height: 5.5em;
         }
+
         .linkList a {
           margin-left: 1.2em;
           margin-right: 1.2em;
         }
       }
+
+      /*@media (min-width:65.4375em) {
+        .titles {
+        }
+      }
+*/
+      /*@media (min-width:65.5em) {
+        .titles h1 {
+          width: 21.80075em;
+        }
+      }*/
 
       @media (min-width:100em) {
         body {
@@ -363,7 +392,7 @@
         <ul>
           <li class="linkList">
             <!-- buttons & links -->
-            <ul>
+            <ul class="linkList-items">
               <li>
                 <!-- <a href="https://www.nypl.org/give/donate" class="btn donate">
                   Donate
@@ -402,7 +431,7 @@
             </ul>
           </li>
           <li class="socialList">
-            <ul>
+            <ul class="socialList-items">
               <!-- social media icons -->
               <li>
                 <form name="myform5" method="post" action="reg.php">
