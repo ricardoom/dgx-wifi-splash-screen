@@ -45,6 +45,8 @@
 
       h1 {
         color: #ED1C24;
+        font-weight: normal;
+        letter-spacing: normal;
         margin-bottom: 0;
       }
 
@@ -231,18 +233,25 @@
         }
 
         .topSection {
-          padding: 2.5em 5%;
+          padding: 5.5em 2.5em;
         }
 
         .logoContainer {
           width: 257px;
-          
+
         }
 
         .titles {
           border-left: 1px solid #333;
+          font-size: 86%;
           padding:0 0 0 3.2em;
-          width: 50%;
+          width: 60%;
+        }
+
+        .titles > p {
+          line-height: 1.05;
+          margin-top: 1em;
+          width: 79%;
         }
 
         .lowerSection ul li {
@@ -259,26 +268,31 @@
         }
       }
 
-      /*@media (min-width:65.4375em) {
-        .titles {
-        }
-      }
-*/
-      /*@media (min-width:65.5em) {
-        .titles h1 {
-          width: 21.80075em;
-        }
-      }*/
 
-      @media (min-width:100em) {
+
+      @media (min-width:90em) {
         body {
-          padding: 10em;
+          padding: 5em;
           }
+
+        .logoContainer {
+          margin-right: 2em;
+          /*position: relative;
+          top: -60px*/
+        }
+        .logoIcon {
+          width: 250px;
+        }
+
+        .titles {
+          font-size: 100%;
+          width: 55%;
+        }
 
         .topSection,
         .lowerSection {
-          padding-left: 15%;
-          padding-right: 15%;
+          padding-left: 10%;
+          padding-right: 10%;
         }
       }
     }
